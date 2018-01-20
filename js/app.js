@@ -39,11 +39,25 @@
                 }else {
                     mark.push(score);
                 }
-                document.querySelector(".continer").innerHTML = `<h1>Your Score: ${mark.reduce((a,b) => a+b)}</h1>`;
+                let result = mark.reduce((a,b) => a+b);
+                let h1 = document.createElement("h1");
+                let h1Text = document.createTextNode(`Your Score: ${result} (${Math.round((result/20) * 100)}%)`);
+                h1.appendChild(h1Text);
+                let p = document.createElement("p");
+                let button = document.createElement("button");
+                let buttonText = document.createTextNode("Play Again");
+                button.appendChild(buttonText);
+                p.appendChild(button);
+                document.querySelector(".container").innerHTML = `<h1>Your Score: ${result} (${Math.round((result/20) * 100)}%)</h1>
+                <p><button type="button" onClick="window.location.reload();">Play Again</button></p>`;
             })
         })
         .catch(err => console.log(err));
-        
+      
+    document.querySelector("button").addEventListener("click", () => {
+        window.location.reload(true);
+    });
+
     function changeQuestion(tQ, qN, data) {
         if(qN == 0) {
             previous.style.display = "none";

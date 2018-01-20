@@ -44,3 +44,19 @@
         display: none;
     }
 }
+
+button {
+    padding: 10px 20px;
+    margin: 20px;
+    background-color: #333;
+    border: 1px solid lighten(red, 20%);
+    text-transform: uppercase;
+    font-size: .7em;
+    color: #fff;
+
+
+    &:hover {
+        background-color: lighten(red, 20%);
+        box-shadow: 0px 0px 3px lightgray;
+    }
+}
