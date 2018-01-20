@@ -49,7 +49,11 @@
                 button.appendChild(buttonText);
                 p.appendChild(button);
                 document.querySelector(".container").innerHTML = `<h1>Your Score: ${result} (${Math.round((result/20) * 100)}%)</h1>
-                <p><button type="button" onClick="window.location.reload();">Play Again</button></p>`;
+                <p><button type="button" onClick="window.location.reload();">Play Again</button></p>
+                `;
+                data.results.forEach(result => {
+                    document.querySelector(".container").innerHTML += `<p>${result.question} | <span style="color:yellow">${result.correct_answer}</span></p>`
+                });
             })
         })
         .catch(err => console.log(err));
