@@ -1,0 +1,19 @@
+{
+    "quiz": [
+        {
+            "question": "Who is the president of Nigeria?",
+            "correct-answer": "Muhammadu Buhari",
+            "wrong-answers": ["Alabi Emmanuel", "Chris Ngige", "Alnord Samuel"]
+        },
+        {
+            "question": "Who is the first prime minister of Nigeria?",
+            "correct-answer": "Tafawa Balewa",
+            "wrong-answers": ["Nelson Uche", "Amadu Bello", "Sam Uchena"]
+        },
+        {
+            "question": "What is the capital of Lagos State?",
+            "correct-answer": "Ikeja",
+            "wrong-answers": ["Lagos", "Ojo", "Ikoyi"]
+        }
+    ]
+}
